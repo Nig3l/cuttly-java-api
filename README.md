@@ -4,7 +4,7 @@ This little library allows users to use the Cuttly API directly from Java Code.
 
 ### Use it
 
-In order to use this library, you must own an API Key. If you don't have one, ou can get one sign in on
+In order to use this library, you must own an API Key. If you don't have one, you can get one by sign in on
 [Cuttly Website](https://cutt.ly)
 
 #### Connect to the service
