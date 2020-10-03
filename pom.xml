@@ -25,6 +25,17 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -79,6 +90,21 @@
           <source>8</source>
           <target>8</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>de.ntcomputer</groupId>
+        <artifactId>executable-packer-maven-plugin</artifactId>
+        <version>1.0.1</version>
+        <configuration>
+          <mainClass>com.nig3l.MyMainClass</mainClass>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>pack-executable-jar</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>

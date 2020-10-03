@@ -9,7 +9,7 @@ In order to use this library, you must own an API Key. If you don't have one, yo
 
 #### Connect to the service
 
-```java
+```java 
 public static void main(String[] args) {
     CuttlyAPI api = new CuttlyAPI("5b0ec248527eacd602e13dec52c950a3");
 }
@@ -17,13 +17,26 @@ public static void main(String[] args) {
 
 #### Short a link
 
-```java
+```java 
 public static void main(String[] args) {
     CuttlyAPI api = new CuttlyAPI("5b0ec248527eacd602e13dec52c950a3");
     CuttlyLink link = api.cut("https://github.com/Nig3l/cuttly-java-api", "Cuttly-API");
 }
 ```
 
+#### Get link stats
+
+```java 
+public static void main(String[] args) {
+    CuttlyAPI api = new CuttlyAPI("5b0ec248527eacd602e13dec52c950a3");
+    CuttlyLink link = api.cut("https://github.com/Nig3l/cuttly-java-api", "Cuttly-API");
+    link.getStats();
+    List<CuttlySysDevice> sysDevices = link.getDevices(CuttlySysDevice.class);
+    for(CuttlySysDevice sys : sysDevices){
+        System.out.printf("System : %s [%d Click(s)]%n", sys.getTag(), sys.getClicks());
+    }
+}
+```
 ## Built With
 
 * [Maven](https://maven.apache.org/) - Dependency Management
